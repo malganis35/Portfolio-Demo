@@ -28,9 +28,10 @@
                 <span class="logo-bracket"></span>
             </div>
             <div class="nav-links">
-                <a href="#demos" class="nav-link">Démo</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <button id="themeToggle" class="theme-toggle" aria-label="Changer de thème">
+                <a href="#demos" class="nav-link" data-i18n="nav-demos">Démo</a>
+                <a href="#contact" class="nav-link" data-i18n="nav-contact">Contact</a>
+                <button id="themeToggle" class="theme-toggle" aria-label="Changer de thème"
+                    data-i18n-aria="theme-toggle">
                     <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -46,6 +47,10 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
+                <button id="languageToggle" class="language-toggle" aria-label="Changer de langue"
+                    data-i18n-aria="language-toggle">
+                    <span class="lang-text">FR</span>
+                </button>
             </div>
         </nav>
     </header>
@@ -54,14 +59,14 @@
     <section class="hero">
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="hero-title-line">Cao Tri DO, PhD</span>
-                <span class="hero-title-highlight">Portail de démo</span>
+                <span class="hero-title-line" data-i18n="hero-title-line">Cao Tri DO, PhD</span>
+                <span class="hero-title-highlight" data-i18n="hero-title-highlight">Portail de démo</span>
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" data-i18n="hero-subtitle">
                 Découvrez mes projets interactifs en Data et IA
             </p>
             <a href="#demos" class="cta-button">
-                <span>Voir les démos</span>
+                <span data-i18n="cta-button">Voir les démos</span>
                 <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
@@ -85,16 +90,16 @@
     <!-- Applications Grid -->
     <section id="demos" class="demos-section">
         <div class="section-header">
-            <h2 class="section-title">Applications de Démonstration</h2>
-            <p class="section-subtitle">Ci-dessous quelques exemples de réalisations.</p>
+            <h2 class="section-title" data-i18n="demos-title">Applications de Démonstration</h2>
+            <p class="section-subtitle" data-i18n="demos-subtitle">Ci-dessous quelques exemples de réalisations.</p>
         </div>
 
         <!-- Filtres -->
         <div class="filters">
-            <button class="filter-btn active" data-filter="all">Tout</button>
-            <button class="filter-btn" data-filter="genai">GenAI</button>
-            <button class="filter-btn" data-filter="ds">Data Science & MLOps</button>
-            <button class="filter-btn" data-filter="viz">Dataviz</button>
+            <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Tout</button>
+            <button class="filter-btn" data-filter="genai" data-i18n="filter-genai">GenAI</button>
+            <button class="filter-btn" data-filter="ds" data-i18n="filter-ds">Data Science & MLOps</button>
+            <button class="filter-btn" data-filter="viz" data-i18n="filter-viz">Dataviz</button>
         </div>
 
         <div class="demos-grid">
@@ -112,8 +117,8 @@
                             <line x1="16" x2="16" y1="16" y2="16" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">Dev Tooling Assistant</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-devtool-title">Dev Tooling Assistant</h3>
+                    <p class="demo-description" data-i18n="demo-devtool-desc">
                         Application interactive d'assistant du quotidien pour les développeurs (diagnostic de code, code
                         review, description pour des MR).
                     </p>
@@ -123,7 +128,7 @@
                         <span class="tag">Groq</span>
                     </div>
                     <a href="https://dev-tooling-chat.streamlit.app/" target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -144,8 +149,8 @@
                             <circle cx="16" cy="10" r="2" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">Medical SOAP Notetaker</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-medical-title">Medical SOAP Notetaker</h3>
+                    <p class="demo-description" data-i18n="demo-medical-desc">
                         Application interactive d'assistant pour les medecins la rédaction de notes au format SOAP dans
                         le domaine médicale.
                     </p>
@@ -155,7 +160,7 @@
                         <span class="tag">Groq</span>
                     </div>
                     <a href="https://soap-writing-assistant.streamlit.app/" target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -172,8 +177,8 @@
                             <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">Chat with Cao</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-chatcao-title">Chat with Cao</h3>
+                    <p class="demo-description" data-i18n="demo-chatcao-desc">
                         Un Chatbot interactif de démo pour présenter le métier et parcours de Cao Tri DO à des
                         étudiants.
                         Réalisé dans le cadre d'un forum métier pour un collège.
@@ -184,7 +189,7 @@
                         <span class="tag">Groq</span>
                     </div>
                     <a href="https://chat-with-cao.streamlit.app/" target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -203,8 +208,8 @@
                             <circle cx="12" cy="12" r="3" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">Hotel Reservation MLOps</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-hotel-title">Hotel Reservation MLOps</h3>
+                    <p class="demo-description" data-i18n="demo-hotel-desc">
                         Projet MLOps End-to-End du déploiement d'un modèle de ML sur Databricks / Power BI.
                     </p>
                     <div class="demo-tags">
@@ -213,7 +218,7 @@
                         <span class="tag">Data Science</span>
                     </div>
                     <a href="https://youtu.be/XOe0MrnGbTQ?si=oNo-fk7eU5WSWVI0" target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -230,8 +235,8 @@
                             <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">Emergency Room Monitoring</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-emergency-title">Emergency Room Monitoring</h3>
+                    <p class="demo-description" data-i18n="demo-emergency-desc">
                         Reporting des urgences hospitalières. Gagnant de la compétition de storytelling DataPears.
                     </p>
                     <div class="demo-tags">
@@ -241,7 +246,7 @@
                     </div>
                     <a href="https://app.powerbi.com/view?r=eyJrIjoiOGMyYmJjZTctY2M4Ni00OWIzLWEzZmItZjc3ZjIxOTk3ODMyIiwidCI6IjMwNWYzOGM3LTI0MDgtNDNlYS04Y2M2LWY5NzI0ZGQ0ZWE3OCJ9"
                         target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -263,8 +268,8 @@
                             <path d="M14.79 14.79a6.29 6.29 0 0 1 0 8.42" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">Pronostic Bébé</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-baby-title">Pronostic Bébé</h3>
+                    <p class="demo-description" data-i18n="demo-baby-desc">
                         Dashboard Power BI des résultats du pronostic de mon 1er bébé.
                     </p>
                     <div class="demo-tags">
@@ -274,7 +279,7 @@
                     </div>
                     <a href="https://app.powerbi.com/view?r=eyJrIjoiYmEzOGY3YmQtZmM2Ny00ZmE4LWE1M2EtNzQ3MGI4ODdiNjQzIiwidCI6IjkyNWViMjNjLTEwMGUtNGQ2MC1iYzg1LTg3MzY2MTRlYjdiMCJ9"
                         target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -294,8 +299,8 @@
                                 d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8a8.2 8.2 0 0 0 5.2-2" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">Benchmark Salary Dev</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-salary-title">Benchmark Salary Dev</h3>
+                    <p class="demo-description" data-i18n="demo-salary-desc">
                         Benchmark des salaires à partir du webscraping de https://salaires.dev/
                     </p>
                     <div class="demo-tags">
@@ -304,7 +309,7 @@
                     </div>
                     <a href="https://app.powerbi.com/view?r=eyJrIjoiMWZlZmYxNjItZWM5ZC00MWMxLTk4ZjctMjgxNTE0OWZlYTE5IiwidCI6IjkyNWViMjNjLTEwMGUtNGQ2MC1iYzg1LTg3MzY2MTRlYjdiMCJ9"
                         target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -323,8 +328,8 @@
                             <path d="M12 16h.01" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">Dashboard Covid-19</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-covid-title">Dashboard Covid-19</h3>
+                    <p class="demo-description" data-i18n="demo-covid-desc">
                         Reporting de suivi de l'épidémie du Covid-19
                     </p>
                     <div class="demo-tags">
@@ -333,7 +338,7 @@
                     </div>
                     <a href="https://app.powerbi.com/view?r=eyJrIjoiZTE2Y2I2NzYtMWIxMS00N2RhLTk1ZDMtZDdkZDAzODY5NzQ2IiwidCI6IjkyNWViMjNjLTEwMGUtNGQ2MC1iYzg1LTg3MzY2MTRlYjdiMCJ9"
                         target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -350,8 +355,8 @@
                             <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">John Snow & the Cholera</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-johnsnow-title">John Snow & the Cholera</h3>
+                    <p class="demo-description" data-i18n="demo-johnsnow-desc">
                         L'histoire en dataviz de comment John Snow a pu vaincre le choléra grâce à la dataviz.
                     </p>
                     <div class="demo-tags">
@@ -360,7 +365,7 @@
                     </div>
                     <a href="https://app.powerbi.com/view?r=eyJrIjoiNzUxZTg4MWQtNjBmZC00YTc4LThmNDAtYjI2M2NkNTU0YWM2IiwidCI6IjkyNWViMjNjLTEwMGUtNGQ2MC1iYzg1LTg3MzY2MTRlYjdiMCJ9"
                         target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -378,8 +383,8 @@
                             <circle cx="12" cy="12" r="3" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">Intelligence visuelle</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-intvis-title">Intelligence visuelle</h3>
+                    <p class="demo-description" data-i18n="demo-intvis-desc">
                         Dashboard pour comprendre les principes d'UX/UI en dataviz (Gestalt, attributs pré-attentifs).
                     </p>
                     <div class="demo-tags">
@@ -389,7 +394,7 @@
                     </div>
                     <a href="https://public.tableau.com/app/profile/do.cao.tri/viz/IntelligenceVisuelle/1_PourquoilaDataViz"
                         target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -409,8 +414,8 @@
                             <path d="M22 19V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">CV Intéractif</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-cv-title">CV Intéractif</h3>
+                    <p class="demo-description" data-i18n="demo-cv-desc">
                         Mon parcours professionnel présenté sous forme de CV interactif réalisé sous Tableau Software.
                     </p>
                     <div class="demo-tags">
@@ -419,7 +424,7 @@
                     </div>
                     <a href="https://public.tableau.com/app/profile/do.cao.tri/viz/CaoTriDO-CVResume/MyResume"
                         target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -441,8 +446,8 @@
                             <path d="M12 16v6" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">Pronostic Rugby</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-rugby-title">Pronostic Rugby</h3>
+                    <p class="demo-description" data-i18n="demo-rugby-desc">
                         Dashboard d'aide à la décision pour les pronostics de la coupe du monde de rugby.
                     </p>
                     <div class="demo-tags">
@@ -451,7 +456,7 @@
                     </div>
                     <a href="https://public.tableau.com/app/profile/do.cao.tri/viz/PrognosticCoupeduMondeRugby2019/1_Prognostic"
                         target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -470,8 +475,8 @@
                             <path d="M16 6.13V2l6 4-8 10V6.13z" />
                         </svg>
                     </div>
-                    <h3 class="demo-title">Sanctions CNIL</h3>
-                    <p class="demo-description">
+                    <h3 class="demo-title" data-i18n="demo-cnil-title">Sanctions CNIL</h3>
+                    <p class="demo-description" data-i18n="demo-cnil-desc">
                         Dashboard d'analyse des montants des sanctions de la CNIL sur les dernières années.
                     </p>
                     <div class="demo-tags">
@@ -480,7 +485,7 @@
                     </div>
                     <a href="https://public.tableau.com/app/profile/do.cao.tri/viz/StatssanctionsRGPD/1_ComparatifsSanctions"
                         target="_blank" class="demo-link">
-                        <span>Lancer l'app</span>
+                        <span data-i18n="launch-app">Lancer l'app</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                         </svg>
@@ -493,8 +498,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="contact-content">
-            <h2 class="contact-title">Restons en Contact</h2>
-            <p class="contact-text">Intéressé par une collaboration ? Discutons de vos projets data et IA.</p>
+            <h2 class="contact-title" data-i18n="contact-title">Restons en Contact</h2>
+            <p class="contact-text" data-i18n="contact-text">Intéressé par une collaboration ? Discutons de vos projets
+                data et IA.</p>
             <div class="contact-links">
                 <a href="mailto:caotri.do@astraviz.fr" class="contact-button">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -523,12 +529,12 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 Portfolio Cao Tri DO, PhD. Créé avec passion pour la Data & l'IA.</p>
+        <p data-i18n="footer-text">&copy; 2026 Portfolio Cao Tri DO, PhD. Créé avec passion pour la Data & l'IA.</p>
     </footer>
 
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut" data-i18n-aria="back-to-top">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M18 15l-6-6-6 6" />
         </svg>
