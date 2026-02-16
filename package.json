@@ -1,0 +1,24 @@
+{
+    "name": "portfolio-demo",
+    "version": "1.0.0",
+    "description": "Portfolio Demo Project",
+    "main": "src/main.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "test": "vitest",
+        "lint": "eslint .",
+        "format": "prettier --write ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^8.56.0",
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "^3.2.5",
+        "vite": "^5.1.4",
+        "vitest": "^1.3.1"
+    }
+}
