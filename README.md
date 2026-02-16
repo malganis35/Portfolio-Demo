@@ -1,207 +1,105 @@
 # 🚀 Portfolio Data & IA - Portail de Démo
 
 Site web statique moderne pour présenter vos applications de démonstration en Data Science et Intelligence Artificielle.
+Ce projet a été modernisé pour utiliser **Vite** comme bundler, offrant une expérience de développement ultra-rapide et des optimisations de production.
 
 ## ✨ Caractéristiques
 
-- **Design moderne** : Interface futuriste avec palette bleu tech et effets néon
-- **100% Responsive** : Optimisé pour mobile, tablette et desktop
-- **Animations fluides** : Effets de hover sophistiqués et transitions douces
-- **Performance optimale** : Site statique ultra-rapide
-- **GitHub Pages ready** : Déployable en quelques clics
+- **Stack Moderne** : Propulsé par Vite, Vitest, ESLint et Prettier.
+- **Design UI/UX** :
+  - Header en **Glassmorphism** avec thème clair.
+  - Curseur personnalisé interactif.
+  - **Animations fluides** et effets de hover sophistiqués.
+  - Intégration Vidéo/GIF en page d'accueil.
+- **100% Responsive** : Optimisé pour mobile, tablette et desktop (Mobile First).
+- **Multilingue** : Support complet **Français / Anglais** avec bouton de toggle.
+- **Fonctionnalités** :
+  - Bouton "Retour en haut" (Back to Top).
+  - Intégration **Google Analytics**.
+  - Favicon personnalisé.
+- **Qualité de Code** : Structure modulaire, tests unitaires, linting et formatage automatique.
 
-## 🎨 Design
+## 🛠️ Installation et Démarrage
 
-- **Palette de couleurs** : Bleu profond (#0a0e27) avec accents cyan (#00d9ff)
-- **Typographie** : Orbitron (titres) + Syne (corps)
-- **Effets** : Grille animée, orbes lumineux, effets de glow néon
-- **Style** : Créatif et moderne, inspiration tech/cyberpunk subtile
+Assurez-vous d'avoir [Node.js](https://nodejs.org/) installé.
 
-## 📁 Structure des fichiers
+1.  **Cloner le projet**
+    ```bash
+    git clone https://github.com/USERNAME/portfolio-data-ia.git
+    cd portfolio-data-ia
+    ```
+
+2.  **Installer les dépendances**
+    ```bash
+    npm install
+    ```
+
+3.  **Lancer le serveur de développement**
+    ```bash
+    npm run dev
+    ```
+    Le site sera accessible à l'adresse `http://localhost:5173`.
+
+## 📦 Scripts Disponibles
+
+- `npm run dev` : Lance le serveur de développement Vite.
+- `npm run build` : Compile le projet pour la production dans le dossier `dist`.
+- `npm run preview` : Prévisualise la version de production localement.
+- `npm run test` : Lance les tests unitaires avec Vitest.
+- `npm run lint` : Vérifie la qualité du code avec ESLint.
+- `npm run format` : Formate le code avec Prettier.
+
+## 📁 Structure du Projet
 
 ```
 portfolio-data-ia/
 │
-├── index.html          # Page principale
-├── styles.css          # Styles et animations
-├── script.js           # Interactions JavaScript
+├── public/             # Assets statiques (images, favicon, etc.)
+├── src/                # Code source principal
+│   ├── modules/        # Modules JavaScript (logique métier)
+│   └── css/            # Fichiers de styles
+├── index.html          # Point d'entrée de l'application
+├── vite.config.js      # Configuration de Vite
+├── .eslintrc.json      # Configuration linter
+├── .prettierrc         # Configuration formateur
 └── README.md           # Ce fichier
 ```
 
-## 🚀 Déploiement sur GitHub Pages
+## 🚀 Déploiement
 
-### 1. Créer un repository GitHub
-
-```bash
-# Dans votre terminal, à la racine du projet
-git init
-git add .
-git commit -m "Initial commit - Portfolio Data & IA"
-```
-
-### 2. Connecter au repository distant
+Le projet est configuré pour être déployé facilement (ex: GitHub Pages, Vercel, Netlify).
+Pour générer les fichiers de production :
 
 ```bash
-# Remplacez USERNAME par votre nom d'utilisateur GitHub
-git remote add origin https://github.com/USERNAME/portfolio-data-ia.git
-git branch -M main
-git push -u origin main
+npm run build
 ```
 
-### 3. Activer GitHub Pages
+Le contenu du dossier `dist/` peut être déployé sur n'importe quel hébergeur statique.
 
-1. Allez dans **Settings** de votre repository
-2. Dans le menu de gauche, cliquez sur **Pages**
-3. Sous **Source**, sélectionnez **main** branch
-4. Cliquez sur **Save**
-5. Votre site sera disponible à : `https://USERNAME.github.io/portfolio-data-ia/`
+## 🎨 Personnalisation
 
-⏱️ Le déploiement prend généralement 1-2 minutes.
+### Modifier les informations
+- Les textes et liens sont dans `index.html`.
+- Pour le support multilingue, vérifiez les attributs `data-i18n` dans le HTML et les traductions correspondantes dans les fichiers JS.
 
-## 🎯 Personnalisation
-
-### Modifier les informations de contact
-
-Dans `index.html`, ligne ~300-320, mettez à jour :
-
-```html
-<a href="mailto:VOTRE-EMAIL@example.com" class="contact-button">
-<a href="https://github.com/VOTRE-USERNAME" target="_blank">
-<a href="https://linkedin.com/in/VOTRE-PROFIL" target="_blank">
-```
-
-### Ajouter/Modifier les applications de démo
-
-Dans `index.html`, trouvez la section `<div class="demos-grid">` (ligne ~85) :
-
-```html
-<article class="demo-card" data-category="ml">
-    <div class="demo-card-glow"></div>
-    <div class="demo-card-content">
-        <div class="demo-icon">
-            <!-- Icône SVG -->
-        </div>
-        <h3 class="demo-title">Titre de votre application</h3>
-        <p class="demo-description">
-            Description de votre application...
-        </p>
-        <div class="demo-tags">
-            <span class="tag">Tech 1</span>
-            <span class="tag">Tech 2</span>
-        </div>
-        <a href="https://URL-DE-VOTRE-APP.com" target="_blank" class="demo-link">
-            <span>Lancer l'app</span>
-            <!-- Icône SVG -->
-        </a>
-    </div>
-</article>
-```
-
-**Pour ajouter une nouvelle application** : Copiez tout le bloc `<article>...</article>` et modifiez :
-- Le titre (`<h3 class="demo-title">`)
-- La description (`<p class="demo-description">`)
-- Les tags (`<span class="tag">`)
-- Le lien (`<a href="..."`)
-
-### Changer les couleurs
-
-Dans `styles.css`, modifiez les variables CSS (lignes 5-15) :
-
-```css
-:root {
-    --color-bg-dark: #0a0e27;           /* Fond principal */
-    --color-accent-cyan: #00d9ff;       /* Couleur accent 1 */
-    --color-accent-blue: #0066ff;       /* Couleur accent 2 */
-    /* ... */
-}
-```
-
-### Modifier le texte du Hero
-
-Dans `index.html`, section hero (lignes ~45-55) :
-
-```html
-<h1 class="hero-title">
-    <span class="hero-title-line">Votre texte</span>
-    <span class="hero-title-highlight">Votre highlight</span>
-</h1>
-<p class="hero-subtitle">
-    Votre sous-titre...
-</p>
-```
-
-## 📱 Responsive
-
-Le site est entièrement responsive avec des breakpoints à :
-- **Mobile** : < 480px
-- **Tablet** : 480px - 768px
-- **Desktop** : > 768px
-
-## ⚡ Performance
-
-- **Pas de dépendances lourdes** : JavaScript vanilla uniquement
-- **CSS optimisé** : Variables et classes réutilisables
-- **Polices Google Fonts** : Chargement asynchrone
-- **Animations GPU** : Utilisation de transform et opacity
-
-## 🎨 Icônes
-
-Les icônes utilisent des SVG inline pour :
-- Meilleure performance
-- Personnalisation facile des couleurs
-- Pas de requêtes HTTP externes
-
-**Pour changer une icône** : Remplacez le code SVG dans `<div class="demo-icon">` avec un SVG de [Heroicons](https://heroicons.com/) ou [Feather Icons](https://feathericons.com/).
-
-## 🐛 Dépannage
-
-### Le site ne s'affiche pas sur GitHub Pages
-- Vérifiez que le fichier principal s'appelle `index.html`
-- Assurez-vous que GitHub Pages est activé dans Settings > Pages
-- Attendez 2-3 minutes pour le premier déploiement
-
-### Les polices ne se chargent pas
-- Vérifiez votre connexion internet
-- Les polices Google Fonts sont hébergées en CDN externe
-
-### Les animations sont saccadées
-- Testez dans un navigateur récent (Chrome, Firefox, Safari)
-- Désactivez les extensions de blocage de scripts
-
-## 🔧 Technologies utilisées
-
-- **HTML5** : Structure sémantique
-- **CSS3** : Grid, Flexbox, Variables, Animations
-- **JavaScript ES6+** : Interactions et animations
-- **Google Fonts** : Orbitron & Syne
-
-## 📄 Licence
-
-Ce template est libre d'utilisation. Personnalisez-le à votre guise !
+### Changer le Design
+- Les variables CSS principales sont dans `src/css/style.css` (ou `styles.css` à la racine si pas encore migré).
+- Modifiez les couleurs : `--color-bg-dark`, `--color-accent-cyan`, etc.
 
 ## 🤝 Contribution
 
-Ce projet a été créé comme template. N'hésitez pas à :
-- Forker le repository
-- Créer une branche pour vos modifications
-- Soumettre une pull request
+Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou une pull request.
 
-## 💡 Idées d'améliorations
+1. Forker le projet
+2. Créer une branche (`git checkout -b feature/AmazingFeature`)
+3. Commit vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Push vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrir une Pull Request
 
-- [ ] Ajouter un filtre par catégorie pour les applications
-- [ ] Intégrer Google Analytics
-- [ ] Ajouter un mode sombre/clair toggle
-- [ ] Créer une section blog
-- [ ] Ajouter des animations au scroll plus avancées
+## 📄 Licence
 
-## 📞 Support
-
-Pour toute question ou suggestion :
-- Ouvrez une issue sur GitHub
-- Contactez-moi via les liens dans le footer du site
+Distribué sous la licence ISC. Voir `LICENSE` pour plus d'informations.
 
 ---
 
 **Créé avec 💙 pour la Data Science et l'IA**
-
-Bon déploiement ! 🚀
