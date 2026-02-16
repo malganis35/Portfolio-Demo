@@ -21,7 +21,7 @@ Desktop.ini
 
 # Node modules (si vous ajoutez npm plus tard)
 node_modules/
-package-lock.json
+# package-lock.json
 
 # Fichiers de build (si vous ajoutez un bundler)
 dist/
