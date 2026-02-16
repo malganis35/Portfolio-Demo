@@ -2,7 +2,7 @@
 // NAVIGATION SCROLL
 // ===========================
 const header = document.querySelector('.header');
-let lastScroll = 0;
+
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
@@ -14,7 +14,7 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled');
     }
 
-    lastScroll = currentScroll;
+
 });
 
 // ===========================
@@ -149,7 +149,7 @@ if (window.matchMedia('(max-width: 768px)').matches) {
 // ===========================
 const floatingCards = document.querySelectorAll('.floating-card');
 
-floatingCards.forEach((card, index) => {
+floatingCards.forEach((card) => {
     // Ajouter un pseudo-contenu lumineux
     const glow = document.createElement('div');
     glow.style.cssText = `
@@ -186,12 +186,7 @@ if (countElement && demoCards.length > 0) {
 // ===========================
 // PRÉCHARGEMENT DES IMAGES (si vous en ajoutez)
 // ===========================
-function preloadImages(urls) {
-    urls.forEach(url => {
-        const img = new Image();
-        img.src = url;
-    });
-}
+
 
 // Exemple : preloadImages(['./assets/image1.jpg', './assets/image2.jpg']);
 
@@ -349,7 +344,6 @@ if (filterBtns.length > 0) {
             });
 
             // Mettre à jour le compteur si nécessaire
-            const visibleCards = document.querySelectorAll('.demo-card[style="display: flex;"]');
             /* Optionnel: mettre à jour un compteur ici */
         });
     });

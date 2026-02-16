@@ -3,7 +3,7 @@ export function initNavigation() {
     // NAVIGATION SCROLL
     // ===========================
     const header = document.querySelector('.header');
-    let lastScroll = 0;
+
 
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
@@ -15,7 +15,7 @@ export function initNavigation() {
             header.classList.remove('scrolled');
         }
 
-        lastScroll = currentScroll;
+
     });
 
     // ===========================
