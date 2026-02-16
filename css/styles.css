@@ -891,6 +891,14 @@ body {
     .contact-button {
         justify-content: center;
     }
+
+    .logo-subtitle {
+        display: none;
+    }
+
+    .custom-cursor {
+        display: none !important;
+    }
 }
 
 @media (max-width: 480px) {
