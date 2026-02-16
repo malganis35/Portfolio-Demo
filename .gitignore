@@ -1,0 +1,28 @@
+# Fichiers macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Fichiers Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Fichiers d'éditeur
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers temporaires
+*.log
+*.tmp
+
+# Node modules (si vous ajoutez npm plus tard)
+node_modules/
+package-lock.json
+
+# Fichiers de build (si vous ajoutez un bundler)
+dist/
+build/
