@@ -7,8 +7,21 @@ export function initTheme() {
 
     // Function to set theme
     function setTheme(theme) {
+        // Disable transitions
+        htmlElement.classList.add('no-transition');
+
+        // Force reflow
+        void htmlElement.offsetHeight;
+
+        // Set theme
         htmlElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
+
+        // Re-enable transitions after a short delay
+        // This ensures the theme change is rendered without transitions
+        setTimeout(() => {
+            htmlElement.classList.remove('no-transition');
+        }, 50);
     }
 
     // Initialize theme
