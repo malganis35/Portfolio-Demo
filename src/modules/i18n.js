@@ -46,7 +46,7 @@ export function initI18n() {
             'demo-cnil-desc': 'Dashboard d\'analyse des montants des sanctions de la CNIL sur les dernières années.',
             'contact-title': 'Restons en Contact',
             'contact-text': 'Intéressé par une collaboration ? Discutons de vos projets data et IA.',
-            'footer-text': '&copy; 2026 Portfolio Cao Tri DO, PhD. Créé avec passion pour la Data & l\'IA.',
+            'footer-text': '© 2026 Portfolio Cao Tri DO, PhD. Créé avec passion pour la Data & l\'IA.',
             'back-to-top': 'Retour en haut',
             'language-toggle': 'Changer de langue'
         },
@@ -96,7 +96,7 @@ export function initI18n() {
             'contact-email': 'Email',
             'contact-github': 'GitHub',
             'contact-linkedin': 'LinkedIn',
-            'footer-text': '&copy; 2026 Portfolio Cao Tri DO, PhD. Created with passion for Data & AI.',
+            'footer-text': '© 2026 Portfolio Cao Tri DO, PhD. Created with passion for Data & AI.',
             'back-to-top': 'Back to top',
             'language-toggle': 'Switch language'
         }
