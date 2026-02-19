@@ -117,12 +117,22 @@
             <p class="section-subtitle" data-i18n="demos-subtitle">Ci-dessous quelques exemples de réalisations.</p>
         </div>
 
-        <!-- Filtres -->
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Tout</button>
-            <button class="filter-btn" data-filter="genai" data-i18n="filter-genai">GenAI</button>
-            <button class="filter-btn" data-filter="ds" data-i18n="filter-ds">Data Science & MLOps</button>
-            <button class="filter-btn" data-filter="viz" data-i18n="filter-viz">Dataviz</button>
+        <!-- Filtres et Recherche -->
+        <div class="filters-container">
+            <div class="search-container">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="demoSearch" class="search-input" placeholder="Rechercher par mots-clés..."
+                    data-i18n-placeholder="search-placeholder">
+            </div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Tout</button>
+                <button class="filter-btn" data-filter="genai" data-i18n="filter-genai">GenAI</button>
+                <button class="filter-btn" data-filter="ds" data-i18n="filter-ds">Data Science & MLOps</button>
+                <button class="filter-btn" data-filter="viz" data-i18n="filter-viz">Dataviz</button>
+            </div>
         </div>
 
         <div class="demos-grid">

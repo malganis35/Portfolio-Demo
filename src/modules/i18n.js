@@ -49,7 +49,8 @@ export function initI18n() {
             'contact-text': 'Intéressé par une collaboration ? Discutons de vos projets data et IA.',
             'footer-text': '© 2026 Portfolio Cao Tri DO, PhD. Créé avec passion pour la Data & l\'IA.',
             'back-to-top': 'Retour en haut',
-            'language-toggle': 'Changer de langue'
+            'language-toggle': 'Changer de langue',
+            'search-placeholder': 'Rechercher par mots-clés...'
         },
         en: {
             'nav-demos': 'Demos',
@@ -100,7 +101,8 @@ export function initI18n() {
             'contact-linkedin': 'LinkedIn',
             'footer-text': '© 2026 Portfolio Cao Tri DO, PhD. Created with passion for Data & AI.',
             'back-to-top': 'Back to top',
-            'language-toggle': 'Switch language'
+            'language-toggle': 'Switch language',
+            'search-placeholder': 'Search by keywords...'
         }
     };
 
@@ -129,6 +131,14 @@ export function initI18n() {
             const key = element.getAttribute('data-i18n-aria');
             if (translations[lang][key]) {
                 element.setAttribute('aria-label', translations[lang][key]);
+            }
+        });
+
+        // Update placeholders
+        document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => {
+            const key = element.getAttribute('data-i18n-placeholder');
+            if (translations[lang][key]) {
+                element.setAttribute('placeholder', translations[lang][key]);
             }
         });
 
