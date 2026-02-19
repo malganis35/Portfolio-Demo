@@ -480,6 +480,40 @@ body {
     transform: translateX(4px);
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-button-secondary {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    box-shadow: none;
+}
+
+.cta-button-secondary::before {
+    display: none;
+}
+
+.cta-button-secondary:hover {
+    background: rgba(102, 126, 234, 0.1);
+    box-shadow: none;
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.cta-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform var(--transition-normal);
+}
+
+.cta-button-secondary:hover .cta-icon {
+    transform: translateY(-1px);
+}
+
 /* Hero Visual - Vidéo */
 .hero-visual {
     flex: 0 0 500px;
